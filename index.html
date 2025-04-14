@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>航空レーダー風アニメーション</title>
+    <style>
+      body {
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .search-radar {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="search-radar" width="600" height="600"></canvas>
+    <script type="module">
+      import SearchRadar from './dist/search-radar.js'
+      const radar = new SearchRadar(document.querySelector('canvas.search-radar'))
+      radar.start()
+    </script>
+  </body>
+</html>
